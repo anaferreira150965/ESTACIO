@@ -54,3 +54,9 @@ biblioteca.remover_livro('0987654321')
 biblioteca.listar_livros()
 
 #py .\livro.py
+def buscar_livro(self, titulo):
+        for livro in self.livros:
+            if livro.titulo == titulo:
+                return f'Título: {livro.titulo}, Autor: {livro.autor}, ISBN: {livro.isbn}'
+        return f'Livro "{titulo}" não encontrado.'
+        print(biblioteca.buscar_livro('O Senhor dos Anéis'))
