@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Divisão de Números</title>
+</head>
+
+<body>
+
+    <h1>Programa de Divisão</h1>
+    <p>O programa solicitará dois números e mostrará o resultado da divisão.</p>
+
+    <script>
+
+        // Declaração do array
+        var numeros = [];
+
+        // Solicita o primeiro número
+        numeros[0] = solicitaPrimeiroNumero();
+
+        // Solicita o segundo número
+        numeros[1] = solicitaSegundoNumero();
+
+        // Realiza a divisão
+        var resultadoDivisao = divida(numeros);
+
+        // Exibe o resultado
+        alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+
+
+        // Função que solicita o primeiro número
+        function solicitaPrimeiroNumero() {
+
+            var numero1 = prompt("Insira o primeiro número:");
+
+            if (numero1 < 0) {
+
+                alert("O número precisa ser inteiro e positivo");
+
+                return solicitaPrimeiroNumero();
+
+            } else {
+
+                return numero1;
+            }
+        }
+
+
+        // Função que solicita o segundo número
+        function solicitaSegundoNumero() {
+
+            var numero2 = prompt("Insira o segundo número:");
+
+            if (numero2 < 0) {
+
+                alert("O número precisa ser inteiro e positivo");
+
+                return solicitaSegundoNumero();
+
+            } else {
+
+                return numero2;
+            }
+        }
+
+
+        // Função responsável pela divisão
+        function divida(numeros) {
+
+            var resultado = 0;
+
+            resultado = numeros[0] / numeros[1];
+
+            return resultado;
+        }
+
+    </script>
+
+</body>
+
+</html>
+<!--start .\divisao.html-->
